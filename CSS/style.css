@@ -1,0 +1,85 @@
+@keyframes moveCar {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100vw); /* Move o carro da esquerda para a direita */
+    }
+  }
+
+  body {
+    background: linear-gradient(to bottom, #afd1ed, #000000);
+    min-height: 100vh;
+  }
+
+#triangulo {
+    width: 0;
+    height: 0;
+
+    border-left: 5px solid transparent; /* Borda verde à esquerda */
+    border-right: 5px solid transparent; /* Borda verde à direita */
+    border-bottom: 10px solid #ede610; /* Base transparente */
+    position: absolute; 
+    top: 30%; 
+    left: 28.1%; 
+    animation: moveCar 5s linear infinite;
+}
+
+
+
+
+
+.car {
+    width: 370px;
+    height: 150px;
+    background: #db3434; /* Cor de fundo para visualizar o clip-path */
+    position: absolute;
+    top: 21%; 
+    left: 5%; 
+    animation: moveCar 5s linear infinite;
+    clip-path: polygon(
+      10% 60%,  /* Ponto superior esquerdo do carro */
+      20% 40%,  /* Ponto inferior esquerdo do carro */
+      80% 40%,  /* Ponto inferior direito do carro */
+      90% 60%,  /* Ponto superior direito do carro */
+      75% 80%,  /* Ponto inferior direito da parte traseira do carro */
+      25% 80%   /* Ponto inferior esquerdo da parte traseira do carro */
+      
+    );
+  }
+
+  #cylinder {
+    width: 160px;
+    height: 60px;
+    position: absolute;
+    top: 27%; 
+    left: 12%; 
+    animation: moveCar 5s linear infinite;
+    border-radius: 75px;
+    background: #db3434
+  
+  }
+
+
+  #roda1 {
+    width: 30px;
+    height: 30px;
+    background-color: #7b7b72; 
+    border-radius: 50%; 
+    position: absolute; 
+    top: 36%; 
+    left: 23%; 
+    animation: moveCar 5s linear infinite;
+    border: 10px solid #000000;
+}
+#roda2 {
+    width: 30px;
+    height: 30px;
+    background-color: #7b7b72; 
+    border-radius: 50%; 
+    position: absolute; 
+    top:36%; 
+    left: 11%; 
+    animation: moveCar 5s linear infinite;
+    border: 10px solid #000000;
+}
